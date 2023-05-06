@@ -1,0 +1,122 @@
+<html>
+    <head>
+  
+      <style>
+        body {
+          background-color: #f6f6f6; /*#FFFAEF;*/
+          font-family: "Avenir";
+          color:rgba(0, 0, 0, 0.7);
+          justify-content: center;
+          display: flex;
+        }
+
+        #mainWelcome {
+            position: absolute; 
+            left: 50%; 
+            transform:translateX(-50%);
+            top: 220px;
+            white-space: nowrap;
+            font-size: 2.4em;
+            color: #05291e;
+        }
+        #tagline {
+            position: absolute; 
+            left: 50%; 
+            transform:translateX(-50%);
+            top: 310px;
+            font-size: 1.2em;
+            text-align: center;
+            color: rgb(96, 195, 117);
+        }
+        #mainImg {
+            position: absolute; 
+            left: calc(50%);
+            top: 50px; 
+            height: 220px;
+            /*
+            animation-name: floating;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            */
+
+            transform:translateX(-50%);
+        }
+        /*
+        @keyframes floating {
+            from { transform: translate(0,  0px); }
+            65%  { transform: translate(0, 10px); }
+            to   { transform: translate(0, -0px); }    
+        }*/
+
+        .externalLink {
+            position: absolute; 
+            width: 200px;
+            height: 20px;
+            border: 2px solid #D37DFE; 
+            background-color: transparent; 
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+        }
+        .externalLink:hover {
+            background-color: #a4e0c49b;
+            cursor: pointer;
+        }
+        #app {
+            top: 430px;
+        }
+        #twitter {
+            top: 500px;
+        }
+        #telegram {
+            top: 570px;
+        }  
+        #chart {
+            top: 640px;
+        } 
+
+        #footerinfo {
+            position: absolute; 
+            bottom: -15px;
+            font-size: 0.9em;
+            left: 10px;
+        }
+  
+      </style>
+    <title>AptSwap Home</title>
+
+    </head>
+    <body>
+    <img id="mainImg" src="./kevinlogo.png">
+    <h5 id="mainWelcome">i am kevin</h5>
+    <h4 id="tagline">0x31555696dD1242B2AB67B9a53b6465c814502F2C</h4>
+    <div class="externalLink" id="app">
+        Medium
+    </div>
+    <div class="externalLink" id="twitter">
+        Twitter
+    </div>
+    <div class="externalLink" id="telegram">
+        Telegram 
+    </div>
+    <div class="externalLink" id="chart">
+        Swap 
+    </div>
+
+    <h6 id="footerinfo"><a style="color:rgba(0, 0, 0, 0.7)" href=""></a>kevintokenteam@gmail.com</h6>
+      <script>
+        document.getElementById("app").onclick = function() { goExternalLink("https://https://medium.com/@kevincoin"); };;
+        document.getElementById("twitter").onclick = function() { goExternalLink("https://twitter.com/kevintoken"); }; 
+        document.getElementById("telegram").onclick = function() { goExternalLink("https://t.me/KevinTokenPortal"); };
+        document.getElementById("chart").onclick = function() { goExternalLink("https://app.uniswap.org/#/swap?outputCurrency=0x31555696dd1242b2ab67b9a53b6465c814502f2c"); };
+      
+        function goExternalLink(link) {
+            window.open(link, "_blank");
+        }
+      </script>
+
+    </body>
+  </html>
